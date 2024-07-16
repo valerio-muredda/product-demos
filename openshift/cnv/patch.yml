@@ -1,6 +1,6 @@
 ---
 - name: Linux server patching for OpenShift Virtalized Hosts
-  hosts: "{{ _hosts | default(omit) }}"
+  hosts: localhost
   become: true
   tasks:
     # Install yum-utils if it's not there
