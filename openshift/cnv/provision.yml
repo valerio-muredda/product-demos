@@ -3,9 +3,9 @@
   hosts: localhost
   tasks:
     - name: Define resources
-      kubernetes.core.k8s:
+      redhat.openshift.k8s:
         wait: true
-        state: "{{ instance_state | default('present') }}"
+        state: "{{ instance_state | default('absent') }}"
         definition:
           apiVersion: kubevirt.io/v1
           kind: VirtualMachine
