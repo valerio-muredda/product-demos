@@ -81,7 +81,10 @@
                     cloudInitNoCloud:
                       userData: |-
                         #cloud-config
-                        chpasswd: { expire: False }
+                        chpasswd:
+                          list: |
+                              root:password
+                          expire: False
                         ssh_pwauth: False
                         ssh_authorized_keys:
                             - "{{ ssh_authorized_key }}"
