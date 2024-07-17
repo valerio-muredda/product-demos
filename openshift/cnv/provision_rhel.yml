@@ -83,7 +83,7 @@
                         #cloud-config
                         chpasswd:
                           list: |
-                              root:password
+                              cloud-user:password
                           expire: False
                         ssh_pwauth: False
                         ssh_authorized_keys:
